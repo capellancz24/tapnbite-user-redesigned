@@ -15,7 +15,7 @@
         android:background="@color/md_theme_primary"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingTop="20dp"
+        android:paddingTop="50dp"
         android:paddingBottom="10dp">
 
         <ImageView
@@ -192,15 +192,16 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/bannerImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
                     android:layout_marginRight="20dp"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/icon_foods"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -235,6 +236,7 @@
                 android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
 
             <TextView
+                android:id="@+id/tvSeeAll"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="bottom"
@@ -250,8 +252,9 @@
         </LinearLayout>
 
         <HorizontalScrollView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scrollbars="none"
             android:layout_gravity="center">
 
             <LinearLayout
@@ -272,9 +275,11 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="60dp">
+                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="0dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -302,9 +307,11 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="60dp">
+                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="0dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -333,8 +340,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="60dp">
+                        android:clickable="true"
+                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="0dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -363,8 +372,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="60dp">
+                        android:clickable="true"
+                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="0dp">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -415,6 +426,7 @@
                 android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
 
             <TextView
+                android:id="@+id/tvSeeAll1"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="bottom"
@@ -429,15 +441,15 @@
                 android:textSize="@dimen/m3_sys_shape_corner_value_large" />
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </HorizontalScrollView>
+        </ScrollView>
 
 
     </LinearLayout>
