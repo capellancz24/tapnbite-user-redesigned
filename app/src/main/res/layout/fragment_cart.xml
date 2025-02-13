@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment.CartFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:theme="?attr/actionBarTheme"
+        app:subtitleTextAppearance="@style/Appbar.Subtitle"
+        app:subtitle="Cart"
+        app:subtitleCentered="true"
+        app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_below="@id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvEmptyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins"
+        android:alpha="0.5"
+        android:text="Oh no! Your cart is empty." />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="@dimen/m3_sys_shape_corner_value_large"
+        android:text="CHECKOUT" />
+
+</RelativeLayout>
