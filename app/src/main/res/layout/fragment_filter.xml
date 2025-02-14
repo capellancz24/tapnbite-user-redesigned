@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FilterFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="48dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="25dp"
+        android:theme="?attr/actionBarTheme"
+        android:paddingEnd="5dp"
+        app:menu="@menu/filter_bar_menu"
+        app:navigationIcon="@drawable/ic_close"
+        app:subtitle="Filter Menu"
+        app:subtitleCentered="true"
+        app:subtitleTextAppearance="@style/Appbar.Subtitle"
+        app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/canteenStores"
+        android:layout_below="@id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/md_theme_primary"
+            android:drawableStart="@drawable/ic_store"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Canteen Stores"
+            android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+            android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
+    </LinearLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        android:id="@+id/chipGroupCanteen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/canteenStores"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <!-- Chips can be declared here, or added dynamically. -->
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.App.Chip"
+            android:id="@+id/chipCanteen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canteen 1"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCanteen2"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canteen 2"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/chipGroupCanteen"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:backgroundTint="@color/black"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:id="@+id/foodCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_dine"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/md_theme_primary"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Food Categories"
+            android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+            android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
+    </LinearLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        app:chipSpacingVertical="0dp"
+        android:id="@+id/chipGroupCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodCategories"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <!-- Chips can be declared here, or added dynamically. -->
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMeal"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meal"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSnack"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snack"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBeverage"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beverage"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDessert"
+            style="@style/Widget.App.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dessert"
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            app:shapeAppearance="@style/ShapeAppearance.App.Corner.Small" />
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>

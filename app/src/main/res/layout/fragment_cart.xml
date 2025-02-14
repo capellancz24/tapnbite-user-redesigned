@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".UserFragment.CartFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:paddingTop="25dp"
+        android:paddingTop="60dp"
         android:paddingBottom="25dp"
         android:theme="?attr/actionBarTheme"
         app:subtitleTextAppearance="@style/Appbar.Subtitle"
@@ -47,6 +48,8 @@
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="15dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/inter_bold"
         android:textSize="@dimen/m3_sys_shape_corner_value_large"

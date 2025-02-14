@@ -51,6 +51,8 @@ dependencies {
 
     // JSON serialization library, works with the Kotlin serialization plugin
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+    implementation ("androidx.transition:transition:1.4.1")
+
 
     implementation(libs.appcompat)
     implementation(libs.material)

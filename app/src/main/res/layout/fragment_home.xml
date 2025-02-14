@@ -19,7 +19,6 @@
         android:paddingBottom="10dp">
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -38,7 +37,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.8"
@@ -68,7 +66,7 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/ibNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
@@ -92,7 +90,6 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="15dp"
@@ -109,7 +106,7 @@
             android:background="@color/white"
             android:ems="10"
             android:fontFamily="@font/inter"
-            android:hint="Search menu, canteen or etc"
+            android:hint="@string/searchbar_hint"
             android:inputType="text"
             android:paddingTop="13dp"
             android:paddingBottom="13dp"
@@ -117,7 +114,10 @@
             android:textColorHint="#878787"
             android:textSize="@dimen/m3_sys_shape_corner_value_large" />
 
-        <ImageView
+        <ImageButton
+            android:clickable="true"
+            android:contentDescription="buttonfilter"
+            android:background="#0000"
             android:id="@+id/ivFilterItems"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:clickable="true"
-                android:fontFamily="@font/inter_semibold"
+                android:fontFamily="@font/inter_medium"
                 android:gravity="bottom"
                 android:paddingStart="10dp"
                 android:text="See All"
@@ -273,11 +273,13 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvMeal"
+                        android:contentDescription="buttonMeal"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardBackgroundColor="#23025CF8"
                         app:cardCornerRadius="60dp"
                         app:cardElevation="0dp">
 
@@ -305,11 +307,13 @@
                     android:layout_margin="8dp">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSnack"
+                        android:contentDescription="buttonSnack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardBackgroundColor="#23025CF8"
                         app:cardCornerRadius="60dp"
                         app:cardElevation="0dp">
 
@@ -337,11 +341,13 @@
                     android:layout_margin="8dp">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvBeverages"
+                        android:contentDescription="buttonBeverages"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardBackgroundColor="#23025CF8"
                         app:cardCornerRadius="60dp"
                         app:cardElevation="0dp">
 
@@ -369,11 +375,13 @@
                     android:layout_margin="8dp">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDessert"
+                        android:contentDescription="buttonDessert"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        app:cardBackgroundColor="@color/md_theme_tertiaryFixed"
+                        app:cardBackgroundColor="#23025CF8"
                         app:cardCornerRadius="60dp"
                         app:cardElevation="0dp">
 
@@ -433,7 +441,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:clickable="true"
-                android:fontFamily="@font/inter_semibold"
+                android:fontFamily="@font/inter_medium"
                 android:gravity="bottom"
                 android:paddingStart="10dp"
                 android:text="See All"
@@ -447,10 +455,10 @@
             android:layout_marginBottom="15dp">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPopularFood"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </ScrollView>
-
 
     </LinearLayout>
 

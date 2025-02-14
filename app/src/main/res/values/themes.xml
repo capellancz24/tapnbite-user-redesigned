@@ -48,6 +48,33 @@
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
+
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        ...
+        <item name="colorOnSurface">@color/md_theme_tertiary</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.App.BodyMedium</item>
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.App.Corner.Small</item>
+        <item name="chipStyle">@style/Widget.App.Chip</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipIconTint">@color/md_theme_primary</item>
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/stroke_tint</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <style name="TextAppearance.App.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Corner.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
     
     <style name="Appbar.Subtitle" parent="@android:style/TextAppearance">
         <item name="android:fontFamily">@font/inter_bold</item>
@@ -67,7 +94,7 @@
 
     <style name="Searchbar.TextAppearance" parent="@android:style/TextAppearance">
         <item name="android:fontFamily">@font/inter</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/m3_sys_shape_corner_value_large</item>
     </style>
 
     <style name="ShapeAppearance.MaterialComponents" parent="">
