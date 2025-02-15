@@ -11,21 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/materialToolbar"
+            android:id="@+id/materialToolbar3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
-            android:paddingTop="60dp"
-            android:paddingBottom="25dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="10dp"
             android:theme="?attr/actionBarTheme"
-            app:subtitleTextAppearance="@style/Appbar.Subtitle"
+            app:navigationIcon="@drawable/ic_arrow_left"
             app:subtitle="Find Your Food"
             app:subtitleCentered="true"
+            app:subtitleTextAppearance="@style/Appbar.Subtitle"
             app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
 
-        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="check"
-        android:icon="@drawable/ic_check"
+        android:id="@+id/menu_apply_filter"
+        android:title="Apply Filter"
+        android:icon="@drawable/ic_check_disabled"
         app:showAsAction="always"
-        android:iconTint="@color/white"
-        />
+        android:enabled="false"></item>
 </menu>

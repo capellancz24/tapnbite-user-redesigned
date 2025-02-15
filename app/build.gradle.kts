@@ -52,6 +52,9 @@ dependencies {
     // JSON serialization library, works with the Kotlin serialization plugin
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation ("androidx.transition:transition:1.4.1")
+    implementation ("com.airbnb.android:lottie:4.2.2")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.cardview:cardview:1.0.0")
 
 
     implementation(libs.appcompat)

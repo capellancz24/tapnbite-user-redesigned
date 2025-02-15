@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".FilterFragment">
+    tools:context=".UserFragment.FilterFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -149,6 +149,7 @@
         <com.google.android.material.chip.Chip
             android:id="@+id/chipSnack"
             style="@style/Widget.App.Chip"
+            android:focusable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Snack"

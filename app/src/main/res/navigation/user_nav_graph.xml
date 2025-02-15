@@ -28,6 +28,9 @@
         <action
             android:id="@+id/navigateToHomeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/navigateToFilterFragment"
+            app:destination="@id/filterFragment" />
     </fragment>
 
     <fragment
@@ -56,12 +59,20 @@
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
-        android:name="com.example.tapnbite.FilterFragment"
+        android:name="com.example.tapnbite.UserFragment.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" >
         <action
             android:id="@+id/navigateToHomeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/navigateToSearchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.example.tapnbite.UserFragment.UserDialogsFragment.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
 
 </navigation>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    tools:context=".UserFragment.UserDialogsFragment.SuccessFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavSuccess"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/success">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Order Confirmed !"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+            android:textSize="@dimen/m3_sys_shape_corner_value_extra_large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:padding="5dp"
+                android:text="Your order has been placed successfully."
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+
+            <TextView
+                android:id="@+id/tvOrderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="@font/inter"
+                android:padding="5dp"
+                android:text="Order History"
+                android:textColor="@color/md_theme_primary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:padding="5dp"
+                android:text="Get your order at"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:padding="5dp"
+                android:text="11:00 AM - 11:15 AM"
+                android:textColor="#878787" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTrackMyOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:fontFamily="@font/inter"
+            android:padding="5dp"
+            android:text="Track My Order"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_primary" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/inter_bold"
+            android:paddingStart="30dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="12dp"
+            android:text="Continue Shopping"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/md_theme_outlineVariant_mediumContrast"
+            android:text="Have any questions? Reach directly to our" />
+
+        <TextView
+            android:id="@+id/tvCustomerSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:textColor="@color/md_theme_primary"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Customer Support" />
+    </LinearLayout>
+
+</RelativeLayout>
