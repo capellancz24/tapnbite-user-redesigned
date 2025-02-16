@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment.faqsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="48dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/ic_arrow_left"
+        app:subtitle="FAQs"
+        app:subtitleCentered="true"
+        app:subtitleTextAppearance="@style/Appbar.Subtitle"
+        app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/materialToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="General Questions"
+                    android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                    android:textSize="@dimen/m3_sys_shape_corner_value_extra_large" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:tint="#878787" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:paddingStart="3dp"
+                        android:text="Last Update: 11 January 2025"
+                        android:textColor="#878787"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="What is TapNBite?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/whatistapnbite"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Who can use TapNBite?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/whocanuse"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_outlineVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Registration and Account"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How do I create an account on TapNBite?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/howcreateacc"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Is my personal information secure?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/personalinformation"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_outlineVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Features and Usage"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="What features does TapNBite offer?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingStart="30dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/features"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How do I track my order?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/trackorder"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_outlineVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Payments"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How do I pay for my order?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/payorder"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="What are 'Pellets'?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/pellets"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Is there a minimum wallet balance required for pre-orders?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/walletbal"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_outlineVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Technical and Accessibility"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Which devices support TapNBite?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/devices"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Do I need an internet connection to use the app?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/internetconnnect"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_outlineVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Canteen Operations"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How does TapNBite help reduce food waste?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/foodwaste"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How does the app assist canteen staff?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/appassist"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_theme_onSurfaceVariant_highContrast" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Limitations and Issues"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Can I use other payment methods apart from the e-wallet?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/paymentmethods"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Are there any risks of using the app?"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="50dp"
+                android:text="@string/risks"
+                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

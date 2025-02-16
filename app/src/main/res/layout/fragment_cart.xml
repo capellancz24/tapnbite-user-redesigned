@@ -38,7 +38,7 @@
         android:layout_centerInParent="true"
         android:fontFamily="@font/poppins"
         android:alpha="0.5"
-        android:text="Oh no! Your cart is empty." />
+        android:text="@string/empty_cart" />
 
     <LinearLayout
         android:layout_width="match_parent"

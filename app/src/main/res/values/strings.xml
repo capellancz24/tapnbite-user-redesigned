@@ -4,4 +4,33 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="searchbar_hint">Search menu, canteen or etc</string>
+    <string name="terms_and_conditions">By creating an account, you agree to our <font color='#025CF8'>Privacy Policy</font> and
+        <font color='#025CF8'>Terms &amp; Conditions</font></string>
+    <string name="empty_cart">Oops! Your cart feels lonely. \nAdd something to keep it company!</string>
+    <string name="privacypolicy">This Privacy Policy explains how <b>TapNBite</b> collects, uses, and protects your personal information</string>
+    <string name="useofdata">TapNBite collects essential user data, such as name, student ID, and order history, to enable account creation, order processing, and payment verification. This data is used solely to enhance the user experience and improve app services. \n\nTapNBite will not share personal information with third parties unless required by law or authorized by the user.</string>
+    <string name="protection">All user data is encrypted and stored securely to prevent unauthorized access. Users are responsible for maintaining the confidentiality of their login credentials. TapNBite implements robust security measures but cannot guarantee absolute immunity from breaches caused by external factors.</string>
+    <string name="rights">Users can access their order and transaction history within the app. They also have the right to request modifications or deletions of their data by contacting TapNBite support. Account deletions will result in the removal of all associated data, including any remaining Pellet balance.</string>
+    <string name="limitations">While TapNBite strives to ensure secure operations, users acknowledge that technical issues or disruptions may occur. TapNBite will not be held liable for damages resulting from connectivity problems, user negligence, or third-party actions outside its control.</string>
+    <string name="terms">Welcome to <b>Tap N Bite!</b> By using the app, you agree to these Terms and Conditions. Please read them carefully to ensure a clear understanding of your rights and responsibilities while using the platform.</string>
+    <string name="responsibilites">Users are required to register on the TapNBite platform with accurate personal details, including their full name, student number, and school email. These details ensure verification and proper account management. \n\nAccounts are personal and non-transferable, and users must safeguard their login credentials. TapNBite reserves the right to suspend accounts in cases of misuse, unauthorized access, or violations of the platform’s terms.</string>
+    <string name="paymentpolicy">TapNBite operates exclusively with Pellets, the app’s digital currency. Users must ensure sufficient wallet balance before placing orders. Payment is processed immediately upon order confirmation, and refunds for cancellations or errors will be reviewed individually. \n\nAny eligible refunds will be credited as Pellets. Users are encouraged to monitor their wallet and transaction history to ensure transparency.</string>
+    <string name="appaccess">The app requires a stable internet connection and is optimized for Android devices. TapNBite is not liable for interruptions caused by connectivity issues or device incompatibility. Users are advised to ensure reliable internet access and to use updated devices for optimal performance.</string>
+    <string name="conduct">Users are encouraged to provide constructive feedback and ratings on the app. Inappropriate or malicious comments aimed at disrupting the platform or harming others are prohibited. TapNBite reserves the right to investigate such behavior and take necessary action, including account suspension.</string>
+    <string name="whatistapnbite">TapNBite is a school canteen e-commerce application designed to modernize the dining experience for students, employees, and canteen staff. It allows users to browse menus, pre-order meals, make payments, and track orders, reducing wait times and food waste.</string>
+    <string name="whocanuse">The app is designed for students, staff, and canteen employees of the school. Each group benefits from features like online ordering, payment integration, and inventory management.</string>
+    <string name="howcreateacc">To create an account, you you way choose if you are a student, staff, and canteen staff then it will proceed to Login Page after the Legal Terms</string>
+    <string name="personalinformation">Yes, the app prioritizes user data security and follows best practices to ensure your information remains safe.</string>
+    <string name="features"><b>Digital Menus:</b> Browse food options with detailed descriptions and prices. \n<b>Pre-Ordering:</b> Order your meals ahead of time and schedule a pickup. \n<b>Payment Integration:</b> Make cashless payments using your app wallet. \n<b>Order Tracking:</b> Get real-time updates on your order status.</string>
+    <string name="trackorder">You will receive updates like \'Order Received,\' \'Preparing Your Order,\' and \'Ready for Pick-Up\' directly in the app.</string>
+    <string name="walletbal">Yes, you must maintain a minimum balance to ensure successful transactions.</string>
+    <string name="pellets">Pellets are the app’s virtual currency used for payments. The name \'Pellets\' is inspired by the bulldog logo and the association with dog food. You can reload your wallet with pellets to make purchases.</string>
+    <string name="payorder">You can pay using the app’s e-wallet, which can be topped up through manual QR transfers or vouchers.</string>
+    <string name="devices">Currently, the app is designed for Android devices.</string>
+    <string name="internetconnnect">Yes, an internet connection is required to browse the menu, place orders, and receive updates.</string>
+    <string name="foodwaste">The app analyzes order trends to help canteen staff manage inventory better, reducing unnecessary food preparation and wastage.</string>
+    <string name="appassist">TapNBite provides staff with a dashboard to manage orders, track inventory, and enhance operational efficiency.</string>
+    <string name="paymentmethods">Currently, only the app’s wallet system is supported for pre-orders.</string>
+    <string name="risks">While the app is designed with security in mind, users should ensure they use strong passwords and only access the app via secure networks.</string>
+
 </resources>

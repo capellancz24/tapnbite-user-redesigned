@@ -6,491 +6,529 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UserFragment.HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@color/md_theme_primary"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="55dp"
-        android:paddingBottom="10dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:src="@drawable/ic_store" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.8"
-                    android:fontFamily="@font/inter"
-                    android:text="Current canteen"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:src="@drawable/ic_dropdown" />
-            </LinearLayout>
-
-
-            <TextView
-                android:id="@+id/tvCanteenNum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_semibold"
-                android:text="Canteen 1"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/ibNotification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:background="#0000"
-            android:contentDescription="notification"
-            android:padding="10dp"
-            android:src="@drawable/ic_notification" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/searchbarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/custom_search_bar"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:paddingTop="15dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="15dp"
-            android:src="@drawable/ic_search" />
-
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:ems="10"
-            android:fontFamily="@font/inter"
-            android:hint="@string/searchbar_hint"
-            android:inputType="text"
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
-            android:text=""
-            android:textColorHint="#878787"
-            android:textSize="@dimen/m3_sys_shape_corner_value_large" />
-
-        <ImageButton
-            android:clickable="true"
-            android:contentDescription="buttonfilter"
-            android:background="#0000"
-            android:id="@+id/ivFilterItems"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:paddingTop="15dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="15dp"
-            android:src="@drawable/ic_tune" />
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvFoodBanner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchbarLayout"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="@color/md_theme_primary"
-        app:cardCornerRadius="35px">
-
-        <LinearLayout
+        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/searchbar_scrolling_view_behavior">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/inter_semibold"
-                    android:paddingTop="15dp"
-                    android:text="35% OFF "
-                    android:textColor="@color/white"
-                    android:textSize="23dp" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="Lorem ipsum dolar sit \namet, consectetur"
-                    android:textColor="@color/white" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="20dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="5dp">
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/inter_semibold"
-                        android:gravity="center"
-                        android:text="Shop Now"
-                        android:textAlignment="center"
-                        android:textColor="@color/md_theme_primary" />
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/bannerImage"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/md_theme_primary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="55dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:src="@drawable/ic_store" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.8"
+                                android:fontFamily="@font/inter"
+                                android:text="Current canteen"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_dropdown" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvCanteenNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Canteen 1"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/ibNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:background="#0000"
+                        android:contentDescription="notification"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_notification" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFoodBanner"
+                    android:layout_width="match_parent"
                     android:layout_height="140dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/icon_foods"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="210dp"
+                    app:cardBackgroundColor="@color/md_theme_primary"
+                    app:cardCornerRadius="35px">
 
-    <LinearLayout
-        android:id="@+id/llCategories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cvFoodBanner"
-        android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter_semibold"
-                android:text="Categories"
-                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
-                android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/inter_semibold"
+                                android:paddingTop="15dp"
+                                android:text="35% OFF "
+                                android:textColor="@color/white"
+                                android:textSize="23dp" />
 
-            <TextView
-                android:id="@+id/tvSeeAll"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:clickable="true"
-                android:fontFamily="@font/inter_medium"
-                android:gravity="bottom"
-                android:paddingStart="10dp"
-                android:text="See All"
-                android:textColor="#878787"
-                android:textSize="@dimen/m3_sys_shape_corner_value_large" />
-        </LinearLayout>
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="Lorem ipsum dolar sit \namet, consectetur"
+                                android:textColor="@color/white" />
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:layout_gravity="center">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="80dp"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="20dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="5dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp">
+                                <TextView
+                                    android:id="@+id/textView24"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/inter_semibold"
+                                    android:gravity="center"
+                                    android:text="Shop Now"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/md_theme_primary" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/bannerImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/icon_foods"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/llCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvFoodBanner"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Categories"
+                            android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                            android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
+
+                        <TextView
+                            android:id="@+id/tvSeeAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="bottom"
+                            android:paddingStart="10dp"
+                            android:text="See All"
+                            android:textColor="#878787"
+                            android:textSize="@dimen/m3_sys_shape_corner_value_large" />
+                    </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_below="@id/cvFoodBanner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_gravity="center"
+                    android:scrollbars="none">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cvMeal"
-                        android:contentDescription="buttonMeal"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="#23025CF8"
-                        app:cardCornerRadius="60dp"
-                        app:cardElevation="0dp">
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:padding="15dp"
-                            app:srcCompat="@drawable/icon_rice" />
-                    </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/inter_semibold"
-                        android:text="Meal"
-                        android:textAlignment="center"
-                        android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
-                </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvMeal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:contentDescription="buttonMeal"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="#23025CF8"
+                                app:cardCornerRadius="60dp"
+                                app:cardElevation="0dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:padding="15dp"
+                                    app:srcCompat="@drawable/icon_rice" />
+                            </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cvSnack"
-                        android:contentDescription="buttonSnack"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        app:cardBackgroundColor="#23025CF8"
-                        app:cardCornerRadius="60dp"
-                        app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/inter_semibold"
+                                android:text="Meal"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:padding="15dp"
-                            app:srcCompat="@drawable/icon_pizza" />
-                    </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/inter_semibold"
-                        android:text="Snack"
-                        android:textAlignment="center"
-                        android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
-                </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvSnack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:contentDescription="buttonSnack"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="#23025CF8"
+                                app:cardCornerRadius="60dp"
+                                app:cardElevation="0dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:padding="15dp"
+                                    app:srcCompat="@drawable/icon_pizza" />
+                            </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cvBeverages"
-                        android:contentDescription="buttonBeverages"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        app:cardBackgroundColor="#23025CF8"
-                        app:cardCornerRadius="60dp"
-                        app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/inter_semibold"
+                                android:text="Snack"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:padding="15dp"
-                            app:srcCompat="@drawable/icon_milk" />
-                    </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/inter_semibold"
-                        android:text="Beverages"
-                        android:textAlignment="center"
-                        android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
-                </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvBeverages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:contentDescription="buttonBeverages"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="#23025CF8"
+                                app:cardCornerRadius="60dp"
+                                app:cardElevation="0dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:padding="15dp"
+                                    app:srcCompat="@drawable/icon_milk" />
+                            </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cvDessert"
-                        android:contentDescription="buttonDessert"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        app:cardBackgroundColor="#23025CF8"
-                        app:cardCornerRadius="60dp"
-                        app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/inter_semibold"
+                                android:text="Beverages"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+                        </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:padding="15dp"
-                            app:srcCompat="@drawable/icon_cheesecake" />
-                    </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/inter_semibold"
-                        android:text="Dessert"
-                        android:textAlignment="center"
-                        android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
-                </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvDessert"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:contentDescription="buttonDessert"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardBackgroundColor="#23025CF8"
+                                app:cardCornerRadius="60dp"
+                                app:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:padding="15dp"
+                                    app:srcCompat="@drawable/icon_cheesecake" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/inter_semibold"
+                                android:text="Dessert"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_theme_onSurfaceVariant_highContrast" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
             </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/llPopularFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCategories"
+                    android:orientation="vertical">
 
-        </HorizontalScrollView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Popular Food"
+                            android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
+                            android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
 
-    </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvSeeAll1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:clickable="true"
+                            android:fontFamily="@font/inter_medium"
+                            android:gravity="bottom"
+                            android:paddingStart="10dp"
+                            android:text="See All"
+                            android:textColor="#878787"
+                            android:textSize="@dimen/m3_sys_shape_corner_value_large" />
+                    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llPopularFood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/llCategories"
-        android:orientation="vertical">
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="30dp"
+                        app:columnCount="2"
+                        app:rowCount="4">
 
-        <LinearLayout
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/viewholder_food" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/viewholder_food" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/viewholder_food" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/viewholder_food" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter_semibold"
-                android:text="Popular Food"
-                android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
-                android:textSize="@dimen/m3_sys_shape_corner_value_large_increased" />
-
-            <TextView
-                android:id="@+id/tvSeeAll1"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:clickable="true"
-                android:fontFamily="@font/inter_medium"
-                android:gravity="bottom"
-                android:paddingStart="10dp"
-                android:text="See All"
-                android:textColor="#878787"
-                android:textSize="@dimen/m3_sys_shape_corner_value_large" />
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:scrollbars="none"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="15dp">
-
-            <androidx.gridlayout.widget.GridLayout
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:columnCount="2"
-                app:rowCount="2">
+                android:layout_marginTop="130dp"
+                android:textAppearance="@style/Searchbar.TextAppearance"
+                android:hint="@string/searchbar_hint"/>
+        </com.google.android.material.appbar.AppBarLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
+        <com.google.android.material.search.SearchView
+            android:id="@+id/svItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/Searchbar.TextAppearance"
+            android:hint="@string/searchbar_hint"
+            app:layout_anchor="@id/search_bar">
+
+            <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scrollbars="none">
+
+            <!-- Add ChipGroup for filter chips -->
+                <com.google.android.material.chip.ChipGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/viewholder_food"
-                    tools:itemCount="1"/>
+                    android:orientation="horizontal"
+                    app:singleLine="true">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/viewholder_food"
-                    tools:itemCount="1"/>
+                    <!-- Add more chips as needed -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_0"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="All" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/viewholder_food"
-                    tools:itemCount="1"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_1"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meal" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/viewholder_food"
-                    tools:itemCount="1"/>
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_2"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Snack" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_3"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beverages" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_4"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dessert" />
 
 
-            </androidx.gridlayout.widget.GridLayout>
-        </ScrollView>
-
-    </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
 
 
+        </com.google.android.material.search.SearchView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>

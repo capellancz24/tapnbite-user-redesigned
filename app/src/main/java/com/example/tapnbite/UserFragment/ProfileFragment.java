@@ -2,7 +2,9 @@ package com.example.tapnbite.UserFragment;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +27,8 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private View view;
+    private CardView aboutUs, faqs, termsAndCondition, privacyPolicy, logout;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -61,6 +65,57 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        aboutUs = view.findViewById(R.id.cvAboutUs);
+        faqs = view.findViewById(R.id.cvFaqs);
+        privacyPolicy = view.findViewById(R.id.cvPrivacyPolicy);
+        termsAndCondition = view.findViewById(R.id.cvTermsAndCondition);
+        logout = view.findViewById(R.id.cvLogout);
+
+        cvClicked();
+
+        return view;
+    }
+
+    private void cvClicked(){
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        faqs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.navigateToFaqsFragment);
+            }
+        });
+
+        privacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.navigateToPrivacyPolicyFragment);
+            }
+        });
+
+        termsAndCondition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.navigateToTermsAndConditionFragment);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //navigate to login
+                //snackbar
+            }
+        });
+
+
+
     }
 }

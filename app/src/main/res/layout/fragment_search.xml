@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".UserFragment.SearchFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -12,8 +11,9 @@
         android:layout_height="match_parent">
 
         <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
+
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/materialToolbar3"
+            android:id="@+id/materialToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"

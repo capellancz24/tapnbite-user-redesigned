@@ -1,27 +1,24 @@
 package com.example.tapnbite.UserFragment;
 
-import android.app.AlertDialog;
-import android.app.StatusBarManager;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.transition.TransitionManager;
 
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.tapnbite.R;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.example.tapnbite.ViewModel.SharedViewModel;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.search.SearchBar;
+import com.google.android.material.search.SearchView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,12 +35,14 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    private EditText search;
     private TextView canteenName, categoriesSeeAll, popularFoodSeeAll;
-    private ImageButton notification, filter;
+    private SearchBar searchBar;
+    private ImageButton notification;
     private CardView meals, snacks, drinks, desserts;
     private RecyclerView popularFood;
+    private MaterialToolbar materialToolbar;
+    private View view;
+    private SearchView searchView;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -70,6 +69,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -80,25 +80,33 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        filter = view.findViewById(R.id.ivFilterItems);
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.navigateToFilterFragment);
-            }
+        canteenName = view.findViewById(R.id.tvCanteenNum);
+        searchView = view.findViewById(R.id.svItems);
+        popularFoodSeeAll = view.findViewById(R.id.tvSeeAll1);
+        searchView = view.findViewById(R.id.svItems);
+
+        searchBar = view.findViewById(R.id.search_bar);
+        searchBar.inflateMenu(R.menu.search_bar_menu);
+
+        // Initialize ViewModel
+        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+
+        // Observe the selected chip
+        viewModel.getSelectedChip().observe(getViewLifecycleOwner(), chipText -> {
+            canteenName.setText(chipText); // Update the canteenName TextView
         });
 
-        search = view.findViewById(R.id.etSearch);
-        search.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    Navigation.findNavController(v).navigate(R.id.navigateToSearchFragment);
-                    return true; // Indicate that the touch event has been handled
-                }
-                return false; // Allow other touch events to be handled
+        searchBar.setOnMenuItemClickListener(menuItem -> {
+            switch (menuItem.getItemId()) {
+                case R.id.action_search:
+                    // Handle the search action
+                    Navigation.findNavController(view).navigate(R.id.navigateToFilterFragment);
+                    return true;
+                // Add other cases if you have more menu items
+                default:
+                    return false;
             }
         });
 
@@ -110,12 +118,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-        popularFoodSeeAll = view.findViewById(R.id.tvSeeAll1);
         popularFoodSeeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                searchView.setVisibility(View.VISIBLE); // Make the SearchView visible
+                searchView.show();
+                searchView.getEditText().setText("");
             }
         });
         return view;

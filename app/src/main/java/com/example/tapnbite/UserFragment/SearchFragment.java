@@ -3,12 +3,16 @@ package com.example.tapnbite.UserFragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.tapnbite.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -27,6 +31,9 @@ public class SearchFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MaterialToolbar materialToolbar;
+    private NavController navController;
+    private View view;
 
 
     public SearchFragment() {
@@ -64,9 +71,27 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        view = inflater.inflate(R.layout.fragment_search, container, false);
 
+
+
+        goBackToHome();
 
         return view;
+    }
+
+    public void goBackToHome(){
+        materialToolbar = view.findViewById(R.id.materialToolbar);
+
+        NavHostFragment navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
+
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigateUp(); // Navigate back
+            }
+        });
     }
 }

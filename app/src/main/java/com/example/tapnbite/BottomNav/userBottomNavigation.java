@@ -34,7 +34,13 @@ public class userBottomNavigation extends AppCompatActivity {
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             // Check if the current destination is the Search Fragment
 
-            if (destination.getId() == R.id.allCategoriesFragment || destination.getId() == R.id.filterFragment || destination.getId() == R.id.searchFragment) {
+            if (destination.getId() == R.id.allCategoriesFragment ||
+                    destination.getId() == R.id.filterFragment ||
+                    destination.getId() == R.id.searchFragment ||
+                    destination.getId() == R.id.privacyPolicyFragment ||
+                    destination.getId() == R.id.termsAndConditionFragment ||
+                    destination.getId() == R.id.faqsFragment)
+            {
                 bottomNavigationView.setVisibility(View.GONE);
             } else {
                 bottomNavigationView.setVisibility(View.VISIBLE);
