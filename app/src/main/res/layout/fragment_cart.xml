@@ -18,7 +18,7 @@
         app:subtitleTextAppearance="@style/Appbar.Subtitle"
         app:subtitle="Cart"
         app:subtitleCentered="true"
-        app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
+        app:subtitleTextColor="@color/white" />
 
     <ScrollView
         android:layout_below="@id/materialToolbar"
@@ -40,29 +40,28 @@
         android:alpha="0.5"
         android:text="@string/empty_cart" />
 
-    <LinearLayout
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:layout_marginBottom="120dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        android:layout_above="@id/bottom_navigation">
 
-        <Button
-            android:id="@+id/btnCheckout"
+        <FrameLayout
+            android:id="@+id/standard_bottom_sheet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#025CF8"
-            android:fontFamily="@font/inter_bold"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Checkout"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-    </LinearLayout>
+            <include layout="@layout/bottomsheet_checkout" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/user_buttom_menu" />
 
 </RelativeLayout>

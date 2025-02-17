@@ -2,13 +2,16 @@ package com.example.tapnbite.UserFragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.example.tapnbite.R;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,9 @@ public class CartFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private View view;
+    private BottomSheetBehavior<FrameLayout> bottomSheetBehavior;
+    private  FrameLayout bottomSheet;
 
     public CartFragment() {
         // Required empty public constructor
@@ -61,6 +67,39 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        view = inflater.inflate(R.layout.fragment_cart, container, false);
+
+        bottomSheet = view.findViewById(R.id.standard_bottom_sheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+
+        orderDetailsSheet ();
+
+        return view;
+    }
+
+    private void orderDetailsSheet (){
+        // Set the peek height to show only the drag handle
+        View dragHandle = view.findViewById(R.id.drag_handle);
+        dragHandle.post(() -> {
+            int dragHandleHeight = dragHandle.getHeight();
+            bottomSheetBehavior.setPeekHeight(dragHandleHeight);
+        });
+
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+        bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                // Handle state changes
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+                // Handle slide offset changes
+            }
+        });
+
+        //if cart is item is not equal to zero then show bottom sheet else dont show
+
     }
 }

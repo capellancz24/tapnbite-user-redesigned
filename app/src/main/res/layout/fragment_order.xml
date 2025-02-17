@@ -15,7 +15,7 @@
         android:paddingTop="60dp"
         android:paddingBottom="25dp"
         android:theme="?attr/actionBarTheme"
-        app:subtitle="Orders"
+        app:subtitle="Order Detail"
         app:subtitleCentered="true"
         app:subtitleTextAppearance="@style/Appbar.Subtitle"
         app:subtitleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
@@ -31,12 +31,17 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Active" />
+            android:text="On Process" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="History" />
+            android:text="Completed" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canceled" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
