@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/user_nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -17,7 +17,7 @@
             android:id="@+id/navigateToFilterFragment"
             app:destination="@id/filterFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_notificationFragment"
+            android:id="@+id/navigateToNotificationFragment"
             app:destination="@id/notificationFragment" />
     </fragment>
     <fragment
@@ -35,7 +35,13 @@
         android:id="@+id/cartFragment"
         android:name="com.example.tapnbite.UserFragment.CartFragment"
         android:label="Cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/navigateToSuccessFragment"
+            app:destination="@id/successFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.tapnbite.UserFragment.ProfileFragment"
@@ -63,7 +69,7 @@
         tools:layout="@layout/fragment_filter" />
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.example.tapnbite.UserFragment.UserDialogsFragment.SuccessFragment"
+        android:name="com.example.tapnbite.UserFragment.UserDialog.SuccessFragment"
         android:label="fragment_success"
         tools:layout="@layout/fragment_success" />
     <fragment
@@ -87,14 +93,90 @@
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
-        android:id="@+id/foodDescriptionFragment"
-        android:name="com.example.tapnbite.UserFragment.FoodDescriptionFragment"
-        android:label="fragment_food_description"
-        tools:layout="@layout/fragment_food_description" />
+        android:id="@+id/foodDetailsFragment"
+        android:name="com.example.tapnbite.UserFragment.FoodDetailsFragment"
+        android:label="fragment_food_details"
+        tools:layout="@layout/fragment_food_details" />
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.example.tapnbite.UserFragment.PaymentFragment"
         android:label="fragment_payment"
         tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/confirmPaymentSheetFragment"
+        android:name="com.example.tapnbite.ConfirmPaymentSheetFragment"
+        android:label="fragment_confirm_payment_sheet"
+        tools:layout="@layout/fragment_confirm_payment_sheet" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.tapnbite.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/onBoarding1Fragment"
+        android:name="com.example.tapnbite.OnBoarding1Fragment"
+        android:label="fragment_on_boarding1"
+        tools:layout="@layout/fragment_on_boarding1" >
+        <action
+            android:id="@+id/navigateToOnboarding2"
+            app:destination="@id/onBoarding2Fragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding2Fragment"
+        android:name="com.example.tapnbite.OnBoarding2Fragment"
+        android:label="fragment_on_boarding2"
+        tools:layout="@layout/fragment_on_boarding2" >
+        <action
+            android:id="@+id/navigateToOnboarding3"
+            app:destination="@id/onBoarding3Fragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding3Fragment"
+        android:name="com.example.tapnbite.OnBoarding3Fragment"
+        android:label="fragment_on_boarding3"
+        tools:layout="@layout/fragment_on_boarding3" >
+        <action
+            android:id="@+id/navigateToLoginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tapnbite.UserFragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/navigateToRegisterFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/navigateToHomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.tapnbite.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/navigateToOnboarding1"
+            app:destination="@id/onBoarding1Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/navigateToLoginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.tapnbite.UserFragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/navigateToLoginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
 
 </navigation>

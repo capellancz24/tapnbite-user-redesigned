@@ -31,7 +31,7 @@
             android:layout_height="1dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="?android:attr/listDivider" />
+            android:background="#99878787" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="1dp"
+                    android:layout_marginEnd="2dp"
                     android:fontFamily="@font/inter_semibold"
                     android:text="P"
                     android:textColor="#878787"
@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
-                    android:text="33"
+                    android:text="33.00"
                     android:textColor="#878787"
                     android:textSize="@dimen/m3_sys_shape_corner_value_large" />
 
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="1dp"
+                    android:layout_marginEnd="2dp"
                     android:fontFamily="@font/inter_semibold"
                     android:text="P"
                     android:textColor="#878787"
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
-                    android:text="1.5"
+                    android:text="10.30"
                     android:textColor="#878787"
                     android:textSize="@dimen/m3_sys_shape_corner_value_large" />
 
@@ -177,7 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
-                    android:text="34.5"
+                    android:text="34.50"
                     android:textColor="@color/md_theme_onSurfaceVariant_highContrast"
                     android:textSize="18sp" />
 
@@ -186,14 +186,14 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnConfirmPayment"
             style="@style/Widget.Material3.Button"
-            android:id="@+id/btnCheckout"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/inter_semibold"
-            android:text="Checkout"
+            android:text="Confirm Payment"
             android:textSize="@dimen/m3_sys_shape_corner_value_large" />
 
     </LinearLayout>

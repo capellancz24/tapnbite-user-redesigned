@@ -32,5 +32,19 @@
     <string name="appassist">TapNBite provides staff with a dashboard to manage orders, track inventory, and enhance operational efficiency.</string>
     <string name="paymentmethods">Currently, only the app’s wallet system is supported for pre-orders.</string>
     <string name="risks">While the app is designed with security in mind, users should ensure they use strong passwords and only access the app via secure networks.</string>
+    <string name="kare_kare_description">Kare Kare is a traditional Filipino stew complimented with a thick savory peanut sauce. The commonly used meats for this dish are... ox tail, tripe, and pork leg; on some occasions goat and chicken meat are also used. Besides the peanuts, this dish depends on the shrimp paste (on the side) in order to be fully enjoyed. Traditionally, “palayok” (clay cooking pot) is used to cook this dish and it is also used as the serving pot.</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="ob_text1">It’s a pleasure to meet you. We are excited that you’re here so let’s get started!</string>
+    <string name="ob_text2">Order from Canteen 1 and 2 \n with easy, pick-up.</string>
+    <string name="ob_text3">Easily find your type of food craving \n and you’ll get it in wide range.</string>
 
 </resources>
