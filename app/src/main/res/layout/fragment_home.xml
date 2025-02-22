@@ -472,7 +472,13 @@
             app:layout_anchor="@id/search_bar">
 
             <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSearchResults"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+            </androidx.recyclerview.widget.RecyclerView>
+            
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

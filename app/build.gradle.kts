@@ -29,11 +29,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation ("com.google.android.material:material:1.7.0")
     implementation(libs.gridlayout)
+    implementation(libs.annotation)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
     val nav_version = "2.8.6"
 
     // Jetpack Compose integration
