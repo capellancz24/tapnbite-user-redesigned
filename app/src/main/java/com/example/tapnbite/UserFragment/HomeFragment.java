@@ -43,6 +43,7 @@ public class HomeFragment extends Fragment {
     private MaterialToolbar materialToolbar;
     private View view;
     private SearchView searchView;
+    private RecyclerView popularFoods;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -126,6 +127,12 @@ public class HomeFragment extends Fragment {
                 searchView.getEditText().setText("");
             }
         });
+
+        //CHAD ILAGAY MO DITO CODE MO SA BABA
+        popularFood = view.findViewById(R.id.rvPopularFood); //recycler view
+
+
+
         return view;
     }
 }

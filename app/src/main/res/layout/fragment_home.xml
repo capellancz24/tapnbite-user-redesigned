@@ -379,7 +379,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <TextView
@@ -410,39 +410,11 @@
                             android:textSize="@dimen/m3_sys_shape_corner_value_large" />
                     </LinearLayout>
 
-                    <androidx.gridlayout.widget.GridLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center"
-                        android:paddingBottom="30dp"
-                        app:columnCount="2"
-                        app:rowCount="4">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/viewholder_food" />
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/viewholder_food" />
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/viewholder_food" />
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/viewholder_food" />
-                    </androidx.gridlayout.widget.GridLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPopularFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:itemCount="10"/>
 
                 </LinearLayout>
 
