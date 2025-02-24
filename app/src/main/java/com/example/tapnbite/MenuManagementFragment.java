@@ -3,20 +3,17 @@ package com.example.tapnbite;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ConfirmPaymentSheetFragment#newInstance} factory method to
+ * Use the {@link MenuManagementFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConfirmPaymentSheetFragment extends BottomSheetDialogFragment {
+public class MenuManagementFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class ConfirmPaymentSheetFragment extends BottomSheetDialogFragment {
     private String mParam1;
     private String mParam2;
 
-    public ConfirmPaymentSheetFragment() {
+    public MenuManagementFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class ConfirmPaymentSheetFragment extends BottomSheetDialogFragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ConfirmPaymentSheetFragment.
+     * @return A new instance of fragment MenuFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ConfirmPaymentSheetFragment newInstance(String param1, String param2) {
-        ConfirmPaymentSheetFragment fragment = new ConfirmPaymentSheetFragment();
+    public static MenuManagementFragment newInstance(String param1, String param2) {
+        MenuManagementFragment fragment = new MenuManagementFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,18 +59,6 @@ public class ConfirmPaymentSheetFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_confirm_payment_sheet, container, false);
-
-        view.findViewById(R.id.btnConfirmPayment).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss(); // Close the bottom sheet
-                NavHostFragment.findNavController(ConfirmPaymentSheetFragment.this)
-                        .navigate(R.id.navigateToSuccessFragment); // Navigate to SuccessFragment
-            }
-        });
-
-
-        return view;
+        return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 }

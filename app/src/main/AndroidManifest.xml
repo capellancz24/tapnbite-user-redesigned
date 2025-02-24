@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Tapnbite"
         tools:targetApi="31">
         <activity
+            android:name=".Bar.BottomAppBarActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BottomNav.userBottomNavigation"
+            android:name=".Bar.userBottomNavigation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.tapnbite;
+package com.example.tapnbite.UserFragment;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.tapnbite.R;
 
 /**
  * A simple {@link Fragment} subclass.

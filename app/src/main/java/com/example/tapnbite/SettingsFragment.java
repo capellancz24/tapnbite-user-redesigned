@@ -3,19 +3,17 @@ package com.example.tapnbite;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SplashScreenFragment#newInstance} factory method to
+ * Use the {@link SettingsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SplashScreenFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,11 +23,8 @@ public class SplashScreenFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private View view;
-    private static final int SPLASH_DISPLAY_LENGTH = 3000; // 5 seconds
 
-
-    public SplashScreenFragment() {
+    public SettingsFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +34,11 @@ public class SplashScreenFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SplashScreenFragment.
+     * @return A new instance of fragment SettingsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SplashScreenFragment newInstance(String param1, String param2) {
-        SplashScreenFragment fragment = new SplashScreenFragment();
+    public static SettingsFragment newInstance(String param1, String param2) {
+        SettingsFragment fragment = new SettingsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,14 +59,6 @@ public class SplashScreenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_splash_screen, container, false);
-
-        // Use a Handler to delay the transition to the next fragment
-        new Handler().postDelayed(() -> {
-            // Navigate to the next fragment (e.g., MainFragment)
-            Navigation.findNavController(view).navigate(R.id.navigateToOnboarding1);
-        }, SPLASH_DISPLAY_LENGTH);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_settings, container, false);
     }
 }

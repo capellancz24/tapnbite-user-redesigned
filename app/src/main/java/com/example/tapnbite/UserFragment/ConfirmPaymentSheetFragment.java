@@ -1,21 +1,23 @@
-package com.example.tapnbite;
+package com.example.tapnbite.UserFragment;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import com.example.tapnbite.R;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link OnBoarding3Fragment#newInstance} factory method to
+ * Use the {@link ConfirmPaymentSheetFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OnBoarding3Fragment extends Fragment {
+public class ConfirmPaymentSheetFragment extends BottomSheetDialogFragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,10 +27,8 @@ public class OnBoarding3Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private View view;
 
-
-    public OnBoarding3Fragment() {
+    public ConfirmPaymentSheetFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +38,11 @@ public class OnBoarding3Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OnBoarding3Fragment.
+     * @return A new instance of fragment ConfirmPaymentSheetFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OnBoarding3Fragment newInstance(String param1, String param2) {
-        OnBoarding3Fragment fragment = new OnBoarding3Fragment();
+    public static ConfirmPaymentSheetFragment newInstance(String param1, String param2) {
+        ConfirmPaymentSheetFragment fragment = new ConfirmPaymentSheetFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,13 +63,14 @@ public class OnBoarding3Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_on_boarding3, container, false);
+        View view = inflater.inflate(R.layout.fragment_confirm_payment_sheet, container, false);
 
-        Button getStarted = view.findViewById(R.id.btnGetStarted);
-        getStarted.setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.btnConfirmPayment).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.navigateToLoginFragment);
+            public void onClick(View v) {
+                dismiss(); // Close the bottom sheet
+                NavHostFragment.findNavController(ConfirmPaymentSheetFragment.this)
+                        .navigate(R.id.navigateToSuccessFragment); // Navigate to SuccessFragment
             }
         });
 

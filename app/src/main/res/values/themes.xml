@@ -55,6 +55,27 @@
         <item name="textAppearanceBodyMedium">@style/TextAppearance.App.BodyMedium</item>
         <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.App.Corner.Small</item>
         <item name="chipStyle">@style/Widget.App.Chip</item>
+        <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="ThemeOverlay.Material3.FloatingActionButton.Primary">
+        <item name="colorPrimaryContainer">@color/md_theme_primaryFixedDim</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_inverseSurface</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.App.Corner.Large</item>
+    </style>
+
+    <style name="TextAppearance.App.Medium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Corner.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30%</item>
     </style>
 
     <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
@@ -77,13 +98,13 @@
     </style>
     
     <style name="Appbar.Subtitle" parent="@android:style/TextAppearance">
-        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
         <item name="android:textSize">@dimen/m3_sys_shape_corner_value_large</item>
     </style>
 
     <style name="Appbar.Title" parent="@android:style/TextAppearance">
-        <item name="android:fontFamily">@font/inter</item>
-        <item name="android:textSize">@dimen/m3_sys_shape_corner_value_medium</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">25dp</item>
     </style>
 
     <style name="TabItem.TextAppearance" parent="@android:style/TextAppearance">

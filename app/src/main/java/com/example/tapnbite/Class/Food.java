@@ -7,16 +7,18 @@ public class Food {
     private String category;
     private String canteen;
     private String store;
+    private String prepTime;
     private int price;
     private String imageUrl;
 
-    public Food(String foodId, String name, String description, String category, String canteen, String store, int price, String imageUrl) {
+    public Food(String foodId, String name, String description, String category, String canteen, String store, String prepTime, int price, String imageUrl) {
         this.foodId = foodId;
         this.name = name;
         this.description = description;
         this.category = category;
         this.canteen = canteen;
         this.store = store;
+        this.prepTime = prepTime;
         this.price = price;
         this.imageUrl = imageUrl;
     }
@@ -43,6 +45,10 @@ public class Food {
 
     public String getStore() {
         return store;
+    }
+
+    public String getPrepTime() {
+        return prepTime;
     }
 
     public int getPrice() {
