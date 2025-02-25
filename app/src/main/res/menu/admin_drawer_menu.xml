@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item1"
+        android:title="Dashboard">
+        <menu>
+            <item
+                android:id="@+id/home"
+                android:icon="@drawable/ic_menu_home"
+                android:title="Home"/>
+            <item
+                android:id="@+id/user"
+                android:icon="@drawable/ic_menu_person"
+                android:title="User Management"/>
+            <item
+                android:id="@+id/item"
+                android:icon="@drawable/ic_menu_food"
+                android:title="Item Management"/>
+            <item
+                android:id="@+id/store"
+                android:icon="@drawable/ic_menu_store"
+                android:title="Store Management"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/item2"
+        android:title="Other Options">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_menu_setting"
+                android:title="Setting"/>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout"/>
+        </menu>
+    </item>
+</menu>

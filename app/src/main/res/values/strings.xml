@@ -47,4 +47,10 @@
     <string name="ob_text2">Order from Canteen 1 and 2 \n with easy, pick-up.</string>
     <string name="ob_text3">Easily find your type of food craving \n and you’ll get it in wide range.</string>
 
+    <string-array name="account_type">
+        <item>Customer</item>
+        <item>Seller</item>
+        <item>Admin</item>
+    </string-array>
+
 </resources>

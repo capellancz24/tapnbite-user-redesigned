@@ -11,7 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.tapnbite.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class userBottomNavigation extends AppCompatActivity {
+public class UserNavBottom extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 

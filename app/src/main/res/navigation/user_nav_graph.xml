@@ -180,26 +180,117 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.tapnbite.AdminFragment.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_menuManagementFragment"
+            app:destination="@id/menuManagementFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/menuFragment"
+        android:id="@+id/menuManagementFragment"
         android:name="com.example.tapnbite.MenuManagementFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuManagementFragment_to_userManagementFragment"
+            app:destination="@id/userManagementFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/userFragment"
+        android:id="@+id/userManagementFragment"
         android:name="com.example.tapnbite.UserManagementFragment"
         android:label="fragment_user"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userManagementFragment_to_storeManagementFragment"
+            app:destination="@id/storeManagementFragment" />
+    </fragment>
     <fragment
         android:id="@+id/storeManagementFragment"
         android:name="com.example.tapnbite.StoreManagementFragment"
         android:label="fragment_store_management"
-        tools:layout="@layout/fragment_store_management" />
+        tools:layout="@layout/fragment_store_management" >
+        <action
+            android:id="@+id/action_storeManagementFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.tapnbite.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_UserInformationFragment"
+            app:destination="@id/UserInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMenuFragment"
+        android:name="com.example.tapnbite.AddMenuFragment"
+        android:label="fragment_add_menu"
+        tools:layout="@layout/fragment_add_menu" >
+        <action
+            android:id="@+id/action_addMenuFragment_to_addStoreFragment"
+            app:destination="@id/addStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.tapnbite.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" >
+        <action
+            android:id="@+id/action_addUserFragment_to_addMenuFragment"
+            app:destination="@id/addMenuFragment" />
+        <action
+            android:id="@+id/action_addUserFragment_to_addMenuFragment2"
+            app:destination="@id/addMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UserInformationFragment"
+        android:name="com.example.tapnbite.UserInformationFragment"
+        android:label="fragment_user_information"
+        tools:layout="@layout/fragment_user_information" >
+        <action
+            android:id="@+id/action_UserInformationFragment_to_MenuInformationFragment"
+            app:destination="@id/MenuInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MenuInformationFragment"
+        android:name="com.example.tapnbite.MenuInformationFragment"
+        android:label="fragment_menu_information"
+        tools:layout="@layout/fragment_menu_information" >
+        <action
+            android:id="@+id/action_MenuInformationFragment_to_storeInformationFragment"
+            app:destination="@id/storeInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeInformationFragment"
+        android:name="com.example.tapnbite.StoreInformationFragment"
+        android:label="fragment_store_information"
+        tools:layout="@layout/fragment_store_information" >
+        <action
+            android:id="@+id/action_storeInformationFragment_to_canteenInformationFragment"
+            app:destination="@id/canteenInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/canteenInformationFragment"
+        android:name="com.example.tapnbite.CanteenInformationFragment"
+        android:label="fragment_canteen_information"
+        tools:layout="@layout/fragment_canteen_information" >
+        <action
+            android:id="@+id/action_canteenInformationFragment_to_transactionsInformationFragment"
+            app:destination="@id/transactionsInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionsInformationFragment"
+        android:name="com.example.tapnbite.TransactionsInformationFragment"
+        android:label="fragment_transactions_information"
+        tools:layout="@layout/fragment_transactions_information" >
+        <action
+            android:id="@+id/action_transactionsInformationFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStoreFragment"
+        android:name="com.example.tapnbite.AddStoreFragment"
+        android:label="fragment_add_store"
+        tools:layout="@layout/fragment_add_store" />
 
 </navigation>

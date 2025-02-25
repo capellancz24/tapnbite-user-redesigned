@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/searchbar_hint"
                 app:navigationIconTint="#878787"
-                app:menu="@menu/search_bar_menu"
+                app:menu="@menu/filter_menu"
                 app:backgroundTint="#85DCDCDC" />
         </com.google.android.material.appbar.AppBarLayout>
 

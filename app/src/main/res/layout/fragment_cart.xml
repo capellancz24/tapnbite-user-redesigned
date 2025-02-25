@@ -157,6 +157,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/user_buttom_menu" />
+        app:menu="@menu/user_bottom_navigation_bar_menu" />
 
 </RelativeLayout>

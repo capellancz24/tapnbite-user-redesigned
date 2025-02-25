@@ -89,7 +89,7 @@ public class HomeFragment extends Fragment {
         searchView = view.findViewById(R.id.svItems);
 
         searchBar = view.findViewById(R.id.search_bar);
-        searchBar.inflateMenu(R.menu.search_bar_menu);
+        searchBar.inflateMenu(R.menu.filter_menu);
 
         // Initialize ViewModel
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);

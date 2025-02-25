@@ -69,7 +69,7 @@
                     app:boxStrokeColor="@color/md_theme_primary"
                     app:boxStrokeWidth="1.5dp"
                     app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_person_filled">
+                    app:startIconDrawable="@drawable/ic_person_fill">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/inputNUEmail"
