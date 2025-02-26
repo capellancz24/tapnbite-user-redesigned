@@ -43,6 +43,7 @@ public class UserNavBottom extends AppCompatActivity {
                     destination.getId() == R.id.onBoarding3Fragment ||
                     destination.getId() == R.id.loginFragment ||
                     destination.getId() == R.id.registerFragment ||
+                    destination.getId() == R.id.dashboardFragment ||
                     destination.getId() == R.id.successFragment
             )
             {

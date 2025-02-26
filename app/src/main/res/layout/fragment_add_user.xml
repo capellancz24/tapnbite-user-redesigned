@@ -54,24 +54,6 @@
         android:paddingTop="15dp"
         android:paddingEnd="24dp">
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/accountType"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Account Type"
-            android:paddingBottom="9dp">
-
-            <AutoCompleteTextView
-                app:simpleItems="@array/account_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_medium"
-                android:inputType="none"
-                android:textSize="15sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeColor="@color/md_theme_primary"

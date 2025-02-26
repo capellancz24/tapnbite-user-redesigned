@@ -5,19 +5,20 @@
         android:title="Dashboard">
         <menu>
             <item
-                android:id="@+id/home"
+                android:id="@+id/nav_home"
                 android:icon="@drawable/ic_menu_home"
+                android:checked="true"
                 android:title="Home"/>
             <item
-                android:id="@+id/user"
+                android:id="@+id/nav_user"
                 android:icon="@drawable/ic_menu_person"
                 android:title="User Management"/>
             <item
-                android:id="@+id/item"
+                android:id="@+id/nav_item"
                 android:icon="@drawable/ic_menu_food"
                 android:title="Item Management"/>
             <item
-                android:id="@+id/store"
+                android:id="@+id/nav_store"
                 android:icon="@drawable/ic_menu_store"
                 android:title="Store Management"/>
         </menu>
@@ -28,11 +29,11 @@
         android:title="Other Options">
         <menu>
             <item
-                android:id="@+id/setting"
+                android:id="@+id/nav_setting"
                 android:icon="@drawable/ic_menu_setting"
                 android:title="Setting"/>
             <item
-                android:id="@+id/logout"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_logout"
                 android:title="Logout"/>
         </menu>
