@@ -5,23 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:paddingTop="48dp"
-        android:paddingEnd="5dp"
-        android:paddingBottom="10dp"
-        android:theme="?attr/actionBarTheme"
-        app:menu="@menu/search_menu"
-        app:navigationIcon="@drawable/ic_arrow_left"
-        app:title="Store"
-        app:titleTextAppearance="@style/Appbar.Title"
-        app:titleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
-
     <!-- Note: A RecyclerView can also be used -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -31,7 +14,34 @@
         android:clipToPadding="false">
 
         <!-- Scrollable content -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:paddingTop="45dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="10dp"
+                android:theme="?attr/actionBarTheme"
+                app:menu="@menu/search_menu"
+                app:navigationIcon="@drawable/ic_arrow_left"
+                app:title="Store"
+                app:titleTextAppearance="@style/Appbar.Title"
+                app:titleTextColor="@color/white"></com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUsers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/materialToolbar" />
+
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomappbar.BottomAppBar

@@ -25,7 +25,7 @@
                 android:layout_marginBottom="25dp"
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
-                android:paddingTop="48dp"
+                android:paddingTop="45dp"
                 android:paddingEnd="5dp"
                 android:paddingBottom="10dp"
                 android:theme="?attr/actionBarTheme"
@@ -58,6 +58,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         style="@style/Widget.App.FloatingActionButton"
+        android:id="@+id/floating_action_button"
         android:contentDescription="additem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -8,9 +8,12 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -35,10 +38,11 @@ public class DashboardFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View view;
-    private ImageButton menu;
-    private CardView users, analytics, transactions, records;
+    private ImageButton more;
+    private CardView users, store, transactions, menu;
     private DrawerLayout drawerLayout;
     private NavigationView navigation_view;
+    private GestureDetector gestureDetector;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -77,68 +81,27 @@ public class DashboardFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
-        menu = view.findViewById(R.id.ibMenu);
+        more = view.findViewById(R.id.ibMore);
         drawerLayout = view.findViewById(R.id.drawer_layout);
         users = view.findViewById(R.id.cvUsers);
-        analytics = view.findViewById(R.id.cvAnalytics);
+        store = view.findViewById(R.id.cvStore);
         transactions = view.findViewById(R.id.cvTransactions);
-        records = view.findViewById(R.id.cvRecords);
-
-        // Handle navigation item clicks
-        navigation_view = view.findViewById(R.id.navigation_view);
-        navigation_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch (id) {
-                    case R.id.nav_home:
-                        // Handle home action
-                        break;
-                    case R.id.nav_user:
-                        // Handle profile action
-                        break;
-                    case R.id.nav_item:
-                        // Handle profile action
-                        break;
-                    case R.id.nav_store:
-                        // Handle profile action
-                        break;
-                    case R.id.nav_setting:
-                        // Handle profile action
-                        break;
-                    case R.id.nav_logout:
-                        // Handle profile action
-                        break;
-                    // Add more cases as needed
-                }
-
-                drawerLayout.closeDrawer(GravityCompat.START);
-                return true;
-            }
-        });
-
-        menu.setOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
+        menu = view.findViewById(R.id.cvMenu);
 
 
+        methodsCall();
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (getActivity() != null) {
-            requireActivity().getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-                @Override
-                public void handleOnBackPressed() {
-                    if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                    } else {
-                        setEnabled(false);
-                        requireActivity().onBackPressed();
-                    }
-                }
-            });
-        }
+    public void methodsCall(){
+        cardviewClicked();
+    }
+
+    public void cardviewClicked(){
+        users.setOnClickListener(view -> Navigation.findNavController(view).navigate(R.id.navigateToUserManagementFragment));
+        store.setOnClickListener(view -> Navigation.findNavController(view).navigate(R.id.navigateToStoreManagementFragment));
+        transactions.setOnClickListener(view -> Navigation.findNavController(view).navigate(R.id.navigateToTransactionManagementFragment));
+        menu.setOnClickListener(view -> Navigation.findNavController(view).navigate(R.id.navigateToMenuManagementFragment));
     }
 
 }

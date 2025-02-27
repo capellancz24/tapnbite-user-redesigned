@@ -3,10 +3,17 @@ package com.example.tapnbite;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,28 +22,19 @@ import android.view.ViewGroup;
  */
 public class UserManagementFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MaterialToolbar materialToolbar;
+    private BottomAppBar bottomAppBar;
+    private FloatingActionButton fab;
 
     public UserManagementFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UserFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static UserManagementFragment newInstance(String param1, String param2) {
         UserManagementFragment fragment = new UserManagementFragment();
         Bundle args = new Bundle();
@@ -59,6 +57,50 @@ public class UserManagementFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user, container, false);
+        View view = inflater.inflate(R.layout.fragment_user, container, false);
+
+        materialToolbar = view.findViewById(R.id.materialToolbar);
+        materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.navigateToDashboardFragment);
+            }
+        });
+
+        fab = view.findViewById(R.id.floating_action_button);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Respond to FAB click
+                Navigation.findNavController(v).navigate(R.id.navigateToAddUserFragment);
+            }
+        });
+
+        bottomAppBar = view.findViewById(R.id.bottomAppBar);
+        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle navigation icon press
+            }
+        });
+
+        // Set menu item click listener
+        bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.action_edit:
+                        // Handle edit icon press
+                        return true;
+                    case R.id.action_delete:
+                        // Handle delete icon press
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+
+        return view;
     }
 }

@@ -13,10 +13,10 @@ import com.google.android.material.appbar.MaterialToolbar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MenuManagementFragment#newInstance} factory method to
+ * Use the {@link TransactionsManagementFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MenuManagementFragment extends Fragment {
+public class TransactionsManagementFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +28,7 @@ public class MenuManagementFragment extends Fragment {
     private String mParam2;
     private MaterialToolbar materialToolbar;
 
-    public MenuManagementFragment() {
+    public TransactionsManagementFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +38,11 @@ public class MenuManagementFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MenuFragment.
+     * @return A new instance of fragment TransactionsManagementFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MenuManagementFragment newInstance(String param1, String param2) {
-        MenuManagementFragment fragment = new MenuManagementFragment();
+    public static TransactionsManagementFragment newInstance(String param1, String param2) {
+        TransactionsManagementFragment fragment = new TransactionsManagementFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +63,7 @@ public class MenuManagementFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_transactions_management, container, false);
 
         materialToolbar = view.findViewById(R.id.materialToolbar);
         materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
