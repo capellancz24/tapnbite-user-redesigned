@@ -39,7 +39,7 @@
             android:textSize="21sp" />
 
         <Button
-            android:id="@+id/btnSave"
+            android:id="@+id/btnAdd"
             style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,7 +71,28 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_medium"
                 android:hint="School ID"
-                android:inputType="textPersonName"
+                android:inputType="text"
+                android:textAppearance="@font/inter_medium"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/md_theme_primary"
+            app:endIconMode="clear_text"
+            app:hintTextColor="#025CF8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCustomerID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:hint="Customer ID"
+                android:inputType="text"
                 android:textAppearance="@font/inter_medium"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_medium"
                 android:hint="NU Email"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
                 android:textAppearance="@font/inter_medium"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -121,7 +142,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeColor="@color/md_theme_primary"
-            app:endIconMode="clear_text"
+            app:endIconMode="password_toggle"
             app:hintTextColor="#025CF8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_medium"
                 android:hint="Password"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:textAppearance="@font/inter_medium"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -150,11 +171,12 @@
             android:paddingBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPelletBalance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_medium"
                 android:hint="Pellet Balance"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:textAppearance="@font/inter_medium"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
