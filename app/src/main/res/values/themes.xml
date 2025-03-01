@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Tapnbite" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary</item>
@@ -77,6 +77,21 @@
         <item name="colorOutline">@color/md_theme_outline</item>
         <item name="textAppearanceTitleSmall">@style/TextAppearance.App.TitleSmall</item>
         <item name="textAppearanceLabelLarge">@style/TextAppearance.App.LabelLarge</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly." parent="Widget.Material3.Button.OutlinedButton">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="strokeColor">@color/md_theme_outline</item>
     </style>
 
     <style name="TextAppearance.App.TitleSmall" parent="TextAppearance.Material3.TitleSmall">

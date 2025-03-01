@@ -52,128 +52,42 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/m3_sys_shape_corner_value_large" />
 
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/btnCustomer"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customer" />
+
+                <Button
+                    android:id="@+id/btnCanteenStaff"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Canteen Staff" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtLayoutFullName"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpUser"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxStrokeColor="@color/md_theme_primary"
-                    app:boxStrokeWidth="1.5dp"
-                    app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_person_fill">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputFullName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_medium"
-                        android:hint="Full Name"
-                        android:inputType="textPersonName"
-                        android:textAppearance="@font/inter_medium"
-                        android:textSize="15sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtLayoutEmail"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxStrokeColor="@color/md_theme_primary"
-                    app:boxStrokeWidth="1.5dp"
-                    app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_mail">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputNUEmail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_medium"
-                        android:hint="NU Email"
-                        android:inputType="textEmailAddress"
-                        android:textAppearance="@font/inter_medium"
-                        android:textSize="15sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtLayoutNUID"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxStrokeColor="@color/md_theme_primary"
-                    app:boxStrokeWidth="1.5dp"
-                    app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_idcard">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputNUID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_medium"
-                        android:hint="School ID"
-                        android:inputType="text|number"
-                        android:textAppearance="@font/inter_medium"
-                        android:textSize="15sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtLayoutPassword"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxStrokeColor="@color/md_theme_primary"
-                    app:boxStrokeWidth="1.5dp"
-                    app:endIconMode="none"
-                    app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_lock">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_medium"
-                        android:hint="Password"
-                        android:inputType="textPassword"
-                        android:textSize="15sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtLayoutConfirmPassword"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    app:boxBackgroundColor="@color/white"
-                    app:boxStrokeColor="@color/md_theme_primary"
-                    app:boxStrokeWidth="1.5dp"
-                    app:cursorColor="@color/md_theme_primary"
-                    app:endIconMode="none"
-                    app:hintTextColor="#025CF8"
-                    app:startIconDrawable="@drawable/ic_lock">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputConfirmPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_medium"
-                        android:hint="Confirm Password"
-                        android:inputType="textPassword"
-                        android:textSize="15sp" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
