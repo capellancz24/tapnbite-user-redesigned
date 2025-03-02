@@ -151,7 +151,11 @@
             app:enterAnim="@android:anim/fade_in" />
         <action
             android:id="@+id/navigateToHomeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/navigateToDashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
