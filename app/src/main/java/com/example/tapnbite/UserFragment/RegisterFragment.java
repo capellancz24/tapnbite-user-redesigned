@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 
 public class RegisterFragment extends Fragment {
 
-    private static final String REGISTER_URL = "http://192.168.18.6/tapnbite/users/createUsers.php";
+    private static final String REGISTER_URL = "http://192.168.1.11/dbtapnbite/users/createUsers.php";
     private View view;
     private TextInputLayout txtLayoutFullName, txtLayoutEmail, txtLayoutNUID, txtLayoutCanteen, txtLayoutStoreName, txtLayoutPassword, txtLayoutConfirmPassword;
     private TextInputEditText inputFullName, inputEmail, inputNUID, inputCanteenNum, inputStoreName, inputPassword, inputConfirmPassword;
